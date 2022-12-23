@@ -1,0 +1,170 @@
+<html>
+	<head>
+		<style>
+			.med{}
+		</style>
+		
+		<script type="text/javascript">
+			function pauseOthers(ele)
+			{
+	               		audio_elements = document.getElementsByClassName("med");
+	   			 for(i=0; i < audio_elements.length; i++) {
+				      audio_element = audio_elements[i];
+				      if (audio_element !== event.target)
+				        audio_element.pause();
+				      }
+	            	}
+			function showdiv(value){
+				divs=document.getElementsByTagName("div");
+				for(i=0;i<divs.length;i++){
+					var divid=document.getElementById(value);
+					if(divid.id==divs[i].id)
+					//console.log(divid.style.display);
+					divid.style.display = "block";
+					else divs[i].style.display= "none";
+				}
+			}
+	
+			
+		</script>	
+
+	</head>
+	<body>
+		<input type="radio" name="unit" value="v1" onclick="showdiv('unit1')"/>Unit-I
+		<input type="radio" name="unit" value="v2" onclick="showdiv('unit2')"/>Unit-II
+		<input type="radio" name="unit" value="v3" onclick="showdiv('unit3')"/>Unit-III
+		<input type="radio" name="unit" value="v4" onclick="showdiv('unit4')"/>Unit-IV
+		<input type="radio" name="unit" value="v5" onclick="showdiv('unit5')"/>Unit-V
+		
+		<div id="unit1" style="display:block">
+		<h2>Unit-1</h2>
+		Audio L1.1<br>
+		<audio  controls onplay="pauseOthers(this);" class="med">
+			<source src="Unit 1\L1.1.mp3" type="audio/mpeg">
+		</audio><br><br>
+		Audio L1.2<br>
+		<audio controls onplay="pauseOthers(this);" class="med">
+			<source src="Unit 1/L1.2.mp3" type="audio/mpeg">
+		</audio><br><br>
+		Audio L1.3<br>
+		<audio controls onplay="pauseOthers(this);" class="med">
+			<source src="Unit 1/L1.3.mp3" type="audio/mpeg">
+		</audio><br><br>
+		</div>
+
+
+
+		<div id="unit2" style="display:none">
+		<h2>Unit-2</h2>
+		Audio L2.1<br>
+		<audio controls onplay="pauseOthers(this);" class="med">
+			<source src="Unit 2/L2.1.mp3" type="audio/mpeg">
+		</audio><br><br>
+		Audio L2.2<br>
+		<audio controls onplay="pauseOthers(this);" class="med">
+			<source src="Unit 2/L2.2.mp3" type="audio/mpeg">
+		</audio><br><br>
+		Audio L2.3<br>
+		<audio controls onplay="pauseOthers(this);" class="med">
+			<source src="Unit 2/L2.3.mp3" type="audio/mpeg">
+		</audio><br><br>
+
+		Audio P2.2(III)<br>
+		<audio controls onplay="pauseOthers(this);" class="med">
+			<source src="Unit 2/P2.2(III).mp3" type="audio/mpeg">
+		</audio><br><br>
+
+		Audio P2.2(IV)<br>
+		<audio controls onplay="pauseOthers(this);" class="med">
+			<source src="Unit 2/P2.2(IV).mp3" type="audio/mpeg">
+		</audio><br><br>
+
+		Audio S2.2<br>
+		<audio controls onplay="pauseOthers(this);" class="med">
+			<source src="Unit 2/S2.2.mp3" type="audio/mpeg">
+		</audio><br><br>
+
+		</div>
+
+
+
+		<div id="unit3" style="display:none">
+		<h2>Unit-3</h2>
+		Audio L3.1(I)<br>
+		<audio controls onplay="pauseOthers(this);" class="med">
+			<source src="Unit 3/L3.1(I).mp3" type="audio/mpeg">
+		</audio><br><br>
+		Audio L3.1(III)<br>
+		<audio controls onplay="pauseOthers(this);" class="med">
+			<source src="Unit 3/L3.1(III).mp3" type="audio/mpeg">
+		</audio><br><br>
+		Video L3.2 video<br>
+		<video width="320" height="240" onplay="pauseOthers(this);" controls class="med">
+		  <source src="Unit 3/L3.2 video.mp4" type="video/mp4">
+		</video><br><br>
+
+		Video L3.2(V) video<br>
+		<video width="320" height="240" onplay="pauseOthers(this);" controls class="med">
+		  <source src="Unit 3/L3.2(V) video.mp4" type="video/mp4">
+		</video><br><br>
+		
+		Video L3.3 video<br>
+		<video width="320" height="240" onplay="pauseOthers(this);" controls class="med">
+		  <source src="Unit 3/L3.3 video.mp4" type="video/mp4">
+		</video>		
+
+
+		</div>
+
+
+
+
+		<div id="unit4" style="display:none">
+		<h2>Unit-4</h2>
+		Video L4.1 video<br>
+		<video width="320" height="240" onplay="pauseOthers(this);" controls class="med">
+		  <source src="Unit 4/L4.1 video.mp4" type="video/mp4">
+		</video><br><br>
+
+		Video L4.2 video<br>
+		<video width="320" height="240" onplay="pauseOthers(this);" controls class="med">
+		  <source src="Unit 4/L4.2 video.mp4" type="video/mp4">
+		</video><br><br>
+		
+		Video L4.3 video<br>
+		<video width="320" height="240" onplay="pauseOthers(this);" controls class="med">
+		  <source src="Unit 4/L4.3 video.mp4" type="video/mp4">
+		</video><br><br>
+
+		Video R4.1<br>
+		<video width="320" height="240" onplay="pauseOthers(this);" controls class="med">
+		  <source src="Unit 4/R4.1.mp4" type="video/mp4">
+		</video><br><br>
+		</div>
+
+
+		<div id="unit5" style="display:none">
+		<h2>Unit-5</h2>
+		Audio L5.1<br>
+		<audio controls onplay="pauseOthers(this);" class="med">
+			<source src="Unit 5/L5.1.mp3" type="audio/mpeg">
+		</audio><br><br>
+		Audio L5.2<br>
+		<audio controls onplay="pauseOthers(this);" class="med">
+			<source src="Unit 5/L5.2.mp3" type="audio/mpeg">
+		</audio><br><br>
+		Audio L5.3<br>
+		<audio  onplay="pauseOthers(this);" controls class="med">
+		  <source src="Unit 5/L5.3.mp3" type="audio/mpeg">
+		</audio><br><br>
+
+		Video Speaking<br>
+		<video width="320" height="240" onplay="pauseOthers(this);" controls class="med">
+		  <source src="Unit 5/Speaking.mp4" type="video/mp4">
+		</video><br><br>
+
+		</div>
+		
+
+	</body>
+</html>
